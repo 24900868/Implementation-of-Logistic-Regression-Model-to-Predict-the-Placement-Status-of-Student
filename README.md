@@ -8,10 +8,16 @@ To write a program to implement the the Logistic Regression Model to Predict the
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Read the dataset from the file Placement_Data.csv using pandas.read_csv()
+2. Copy the dataset: Create a copy of the original dataset to avoid modifying the original.
+3. Split the Data into Features and Target
+4. Split the dataset into training and testing sets using train_test_split() from sklearn.model_selection:
+5. Initialize the LogisticRegression model from sklearn.linear_model.
+6. Use the trained model to predict the target variable on the test data (x_test) using predict().
+7. Use confusion_matrix() from sklearn.metrics to generate a confusion matrix to evaluate the classification performance.
+8. Use classification_report() from sklearn.metrics to generate a detailed classification report. It includes metrics such as precision, recall, F1-score, and support for each class in the dataset.
+9. Predict for a New Input
+
 
 ## Program:
 ```
@@ -20,7 +26,9 @@ Program to implement the the Logistic Regression Model to Predict the Placement 
 Developed by: M.Mahalakshmi
 RegisterNumber: 24900868 
 */
-```import pandas as pd
+```
+```
+import pandas as pd
 data=pd.read_csv("C:\\Users\\admin\\Downloads\\Placement_Data.csv")
 data.head()
 data1=data.copy()
@@ -57,9 +65,11 @@ confusion
 from sklearn.metrics import classification_report
 classification_report1=classification_report(y_test,y_pred)
 print(classification_report1)
-lr.predict([[1,80,1,90,1,1,90,1,0,85,1,85]])```
+lr.predict([[1,80,1,90,1,1,90,1,0,85,1,85]])
+```
 
 ## Output:
+```
 ![the Logistic Regression Model to Predict the Placement Status of Student](sam.png)
 	sl_no	gender	ssc_p	ssc_b	hsc_p	hsc_b	hsc_s	degree_p	degree_t	workex	etest_p	specialisation	mba_p	status	salary
 0	1	M	67.00	Others	91.00	Others	Commerce	58.00	Sci&Tech	No	55.0	Mkt&HR	58.80	Placed	270000.0
@@ -107,6 +117,6 @@ array([[11,  5],
 weighted avg       0.81      0.81      0.81        43
 
 array([0])
-
+```
 ## Result:
 Thus the program to implement the the Logistic Regression Model to Predict the Placement Status of Student is written and verified using python programming.
